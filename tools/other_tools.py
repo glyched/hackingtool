@@ -27,7 +27,22 @@ class HatCloud(HackingTool):
         site = input("Enter Site >> ")
         os.chdir("HatCloud")
         subprocess.run(["sudo", "ruby", "hatcloud.rb", "-b", site])
-
+class glyched_toolkit(HackingTool):
+    TITLE = "glyched toolkit"
+    DESCRIPTION = "glyched tools is a toolkit featuring 10 simple, yet powerful tools, written in python3"\
+                  "--TOOLS--"\
+                  "File encryption with fernet"\
+                  "sherlocK:hunt down social media"\
+                  "bulk-emailer"\
+                  "MAC spoofer"\
+                  "networkScanner(nmap is better)"\
+                  "ARP-SPOOF:be the third wheel between the target and router!"\
+                  "PacketSniffer:best-used with ARP-spoof"\
+                  "DNS-Spoofer:makes it easy to rickroll!"\
+                  "File-replacer:Replace the targets sketchy downloads with even sketchier ones!"
+    INSTALL_COMMANDS = ["git clone https://github.com/glyched/glyched-tool"]
+    PROJECT_URL = ["https://github.com/glyched/glyched-tool"]
+                   
 
 class OtherTools(HackingToolsCollection):
     TITLE = "Other tools"
@@ -43,4 +58,5 @@ class OtherTools(HackingToolsCollection):
         PayloadInjectorTools(),
         WebCrawlingTools(),
         MixTools()
+        glyched_toolkit()
     ]
